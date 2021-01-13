@@ -1,7 +1,39 @@
 package com.kodilla.testing;
 
+import com.kodilla.testing.calculator.Calculator;
+import com.kodilla.testing.user.SimpleUser;
+
 public class TestingMain {
     public static void main(String[]args){
-        System.out.println("Moduł 6. Wprowadzenie do testowania oprogramowania");
+        SimpleUser simpleUser = new SimpleUser("theForumUser");
+
+        String result = simpleUser.getUsername();
+
+        if (result.equals("theForumUser")) {
+            System.out.println("Test OK");
+        } else {
+            System.out.println("Test Error");
+        }
+
+        Calculator calculator = new Calculator();
+
+        System.out.println("Checking if a + b = 10");
+
+        int addResult = calculator.add(5,5);
+            if (addResult == 10){
+                System.out.println("Test Ok");
+            } else {
+                System.out.println("Test Error");
+            }
+
+        System.out.println("Checking if a - b = 0");
+
+        int substractResult = calculator.substract(5, 5);
+            if (substractResult == 0) {
+                System.out.println("Test Ok");
+            } else {
+                System.out.println("Test Error");
+            }
+
     }
 }
