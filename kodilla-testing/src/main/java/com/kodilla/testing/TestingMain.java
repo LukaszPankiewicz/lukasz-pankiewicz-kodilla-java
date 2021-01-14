@@ -4,7 +4,7 @@ import com.kodilla.testing.calculator.Calculator;
 import com.kodilla.testing.user.SimpleUser;
 
 public class TestingMain {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
         String result = simpleUser.getUsername();
@@ -19,21 +19,21 @@ public class TestingMain {
 
         System.out.println("Checking if a + b = 10");
 
-        int addResult = calculator.add(5,5);
-            if (addResult == 10){
-                System.out.println("Test Ok");
-            } else {
-                System.out.println("Test Error");
-            }
+        int addResult = calculator.add(5, 5);
+        if (addResult == 10) {
+            System.out.println("Test Ok");
+        } else {
+            System.out.println("Test Error");
+        }
 
         System.out.println("Checking if a - b = 0");
 
         int substractResult = calculator.substract(5, 5);
-            if (substractResult == 0) {
-                System.out.println("Test Ok");
-            } else {
-                System.out.println("Test Error");
-            }
+        if (substractResult == 0) {
+            System.out.println("Test Ok");
+        } else {
+            System.out.println("Test Error");
+        }
 
     }
 }
