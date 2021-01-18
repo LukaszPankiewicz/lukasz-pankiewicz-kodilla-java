@@ -48,8 +48,10 @@ public class ShapeCollectorTestSuite {
         void testRemoveFigure() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
+
             Circle circle = new Circle();
             Square square = new Square();
+
             shapeCollector.addFigure(circle);
             shapeCollector.addFigure(square);
 
@@ -70,9 +72,11 @@ public class ShapeCollectorTestSuite {
         void testGetFigure() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
+
             Circle circle = new Circle();
             Square square = new Square();
             Triangle triangle = new Triangle();
+
             shapeCollector.addFigure(circle);
             shapeCollector.addFigure(square);
             shapeCollector.addFigure(triangle);
@@ -88,6 +92,7 @@ public class ShapeCollectorTestSuite {
         void showFigures() {
             //Given
             ShapeCollector shapeCollector = new ShapeCollector();
+
             shapeCollector.addFigure(new Square());
             shapeCollector.addFigure(new Triangle());
             shapeCollector.addFigure(new Circle());
