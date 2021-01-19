@@ -24,11 +24,7 @@ public class ShapeCollector {
     }
 
     public Shape getFigure(int n) {
-        Shape theFigure = null;
-        if (n >= 0 && n < figures.size()) {
-            theFigure = figures.get(n);
-        }
-        return theFigure;
+        return figures.get(n);
     }
 
     public String showFigures() {

@@ -4,7 +4,7 @@ public class Circle implements Shape {
     private double r;
     private int second = 2;
 
-    public Circle() {
+    public Circle(double r, int second) {
         this.r = r;
         this.second = second;
     }
