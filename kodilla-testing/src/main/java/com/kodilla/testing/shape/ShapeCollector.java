@@ -5,10 +5,7 @@ import java.util.List;
 
 public class ShapeCollector {
 
-
-
     List<Shape> figures = new ArrayList<>();
-
 
     public void addFigure(Shape shape) {
         figures.add(shape);
@@ -16,7 +13,7 @@ public class ShapeCollector {
 
     public boolean removeFigure(Shape shape) {
         boolean result = false;
-        if(figures.contains(shape)) {
+        if (figures.contains(shape)) {
             figures.remove(shape);
             result = true;
         }
@@ -29,7 +26,7 @@ public class ShapeCollector {
 
     public String showFigures() {
         String result = "";
-        for (Shape show: figures) {
+        for (Shape show : figures) {
             result += show.getShapeName();
         }
         return result;

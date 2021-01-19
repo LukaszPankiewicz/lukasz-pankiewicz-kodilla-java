@@ -7,6 +7,7 @@ public class Circle implements Shape {
         this.r = r;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
