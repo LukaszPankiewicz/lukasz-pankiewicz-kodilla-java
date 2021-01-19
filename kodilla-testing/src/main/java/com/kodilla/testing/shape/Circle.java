@@ -2,11 +2,9 @@ package com.kodilla.testing.shape;
 
 public class Circle implements Shape {
     private double r;
-    private int second = 2;
 
-    public Circle(double r, int second) {
+    public Circle(double r) {
         this.r = r;
-        this.second = second;
     }
 
     @Override
@@ -17,7 +15,6 @@ public class Circle implements Shape {
         Circle circle = (Circle) o;
 
         if (Double.compare(circle.r, r) != 0) return false;
-        if (second != circle.second) return false;
 
         return true;
     }
@@ -28,7 +25,7 @@ public class Circle implements Shape {
         long temp;
         temp = Double.doubleToLongBits(r);
         result = (int) (temp ^ (temp >>> 32));
-        result = 31 * result + second;
+        result = 31 * result;
         return result;
     }
 
@@ -39,7 +36,7 @@ public class Circle implements Shape {
 
     @Override
     public double getField() {
-        return 3.14 * Math.pow(r, second);
+        return 3.14 * Math.pow(r, 2);
     }
 
 }
