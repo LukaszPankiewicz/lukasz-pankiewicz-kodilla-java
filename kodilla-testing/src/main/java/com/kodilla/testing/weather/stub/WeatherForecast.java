@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WeatherForecast {
+
     private Temperatures temperatures;
 
     public WeatherForecast(Temperatures temperatures) {
