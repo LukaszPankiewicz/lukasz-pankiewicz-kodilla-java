@@ -9,7 +9,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
@@ -18,14 +17,16 @@ import static org.mockito.Mockito.*;
 public class BookDirectoryTestSuite {
     @Mock
     private LibraryDatabase libraryDatabaseMock;
-    private List<Book> generateListOfNBooks(int booksQuantity){
+
+    private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<>();
         for (int n = 1; n <= booksQuantity; n++) {
-            Book theBook = new Book ("Title " + n, "Author" + n, 1970 + n);
+            Book theBook = new Book("Title " + n, "Author" + n, 1970 + n);
             resultList.add(theBook);
         }
         return resultList;
     }
+
     @Test
     void testListBooksWithConditionsReturnList() {
         //Given
@@ -48,11 +49,12 @@ public class BookDirectoryTestSuite {
         //Then
         Assertions.assertEquals(4, theListOfBooks.size());
     }
+
     @Test
     void testListBooksWithConditionMoreThan20() {
         //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> resultListOf0Books = new ArrayList<Book>();
+        List<Book> resultListOf0Books = new ArrayList<>();
         List<Book> resultListOf15Books = generateListOfNBooks(15);
         List<Book> resultListOf40Books = generateListOfNBooks(40);
         when(libraryDatabaseMock.listBooksWithCondition
@@ -71,8 +73,8 @@ public class BookDirectoryTestSuite {
         Assertions.assertEquals(0, theListOfBooks0.size());
         Assertions.assertEquals(15, theListOfBooks15.size());
         Assertions.assertEquals(40, theListOfBooks40.size());
-
     }
+
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
         // Given
@@ -86,11 +88,12 @@ public class BookDirectoryTestSuite {
         Assertions.assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
+
     @Test
     void listBooksInHandsIfEmpty() {
         //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        LibraryUser libraryUser = new LibraryUser ("Qwe", "Ewq", "12345321");
+        LibraryUser libraryUser = new LibraryUser("Qwe", "Ewq", "12345321");
         List<Book> resultListOf0Book = new ArrayList<>();
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf0Book);
 
