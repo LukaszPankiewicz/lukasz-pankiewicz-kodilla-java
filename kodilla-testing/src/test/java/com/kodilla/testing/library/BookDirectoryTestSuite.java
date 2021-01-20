@@ -26,7 +26,6 @@ public class BookDirectoryTestSuite {
         }
         return resultList;
     }
-
     @Test
     void testListBooksWithConditionsReturnList() {
         //Given
@@ -49,7 +48,6 @@ public class BookDirectoryTestSuite {
         //Then
         Assertions.assertEquals(4, theListOfBooks.size());
     }
-
     @Test
     void testListBooksWithConditionMoreThan20() {
         //Given
@@ -74,7 +72,6 @@ public class BookDirectoryTestSuite {
         Assertions.assertEquals(15, theListOfBooks15.size());
         Assertions.assertEquals(40, theListOfBooks40.size());
     }
-
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
         // Given
@@ -88,7 +85,6 @@ public class BookDirectoryTestSuite {
         Assertions.assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
-
     @Test
     void listBooksInHandsIfEmpty() {
         //Given
@@ -103,7 +99,6 @@ public class BookDirectoryTestSuite {
         //Then
         Assertions.assertEquals(0, theListOfBooks.size());
     }
-
     @Test
     void listBooksInHandsIf1() {
         //Given
@@ -118,7 +113,6 @@ public class BookDirectoryTestSuite {
         //Then
         Assertions.assertEquals(1, theListOfBooks.size());
     }
-
     @Test
     void listBooksInHandsIf5() {
         //Given

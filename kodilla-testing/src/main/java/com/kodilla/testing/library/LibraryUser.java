@@ -46,7 +46,6 @@ public class LibraryUser {
         if (lastName != null ? !lastName.equals(that.lastName) : that.lastName != null) return false;
         return peselID != null ? peselID.equals(that.peselID) : that.peselID == null;
     }
-
     @Override
     public int hashCode() {
         int result = firstName != null ? firstName.hashCode() : 0;
