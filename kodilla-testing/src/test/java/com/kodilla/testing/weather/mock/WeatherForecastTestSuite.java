@@ -13,7 +13,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
@@ -91,6 +90,5 @@ public class WeatherForecastTestSuite {
 
         //Then
         Assertions.assertEquals(25.5, medianTemp);
-
     }
 }
