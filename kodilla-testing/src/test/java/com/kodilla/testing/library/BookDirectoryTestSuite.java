@@ -109,7 +109,7 @@ public class BookDirectoryTestSuite {
         //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser = new LibraryUser("Qwe", "Ewq", "1234321");
-        List<Book> resultListOf1Book = new ArrayList<>();
+        List<Book> resultListOf1Book = generateListOfNBooks(1);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf1Book);
 
         //When
@@ -124,8 +124,8 @@ public class BookDirectoryTestSuite {
         //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser = new LibraryUser("Qwe", "Ewq", "1234321");
-        List<Book> resultListOf5Book = new ArrayList<>();
-        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf5Book);
+        List<Book> resultListOf5Books = generateListOfNBooks(5);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf5Books);
 
         //When
         List<Book> theListOfBooks = bookLibrary.listBooksInHandsOf(libraryUser);
