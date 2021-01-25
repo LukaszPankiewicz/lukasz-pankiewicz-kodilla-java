@@ -1,25 +1,32 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.lambda.*;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
 
-import java.util.Locale;
-
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String[] args) {
+        Forum theForum = new Forum();
+        System.out.println("Default collection");
+        System.out.println("# elements: " + theForum.getUserList().size() + "\n");
+        theForum.getUserList().stream()
+                .forEach(System.out::println);
 
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("ABC", text -> "abc" + " Beauty");
-        poemBeautifier.beautify("CBA", text -> "cba");
-        poemBeautifier.beautify("CBA", text -> text + "cba" + text);
-        poemBeautifier.beautify("java nie jest prosta", text -> text.toUpperCase());
-        poemBeautifier.beautify("NIKT NIE MOWIL ZE JEST PROSTA", text -> text.toLowerCase());
-        poemBeautifier.beautify("WKodilliMowiliZeJest", text -> String.valueOf(text.length()));
-        poemBeautifier.beautify("Klamcy", text -> String.valueOf(text.getBytes()));
+        Map<Integer, ForumUser> theResultStringOfForum = theForum.getUserList().stream()
+                .filter(forumUser -> forumUser.getSex() == 'M')
+                .filter(forumUser -> Period.between(forumUser.getBirthDate(),
+                        LocalDate.now()).getYears() >= 20)
+                .filter(forumUser -> forumUser.getNumberOfPostsPublished() > 0)
+                .collect(Collectors.toMap(ForumUser::getUserIdNumber, forum -> forum));
 
-
-
+        System.out.println("\n" + "Changed collection");
+        System.out.println("# elements: " + theResultStringOfForum.size());
+        theResultStringOfForum.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue())
+                .forEach(System.out::println);
     }
 }
-
