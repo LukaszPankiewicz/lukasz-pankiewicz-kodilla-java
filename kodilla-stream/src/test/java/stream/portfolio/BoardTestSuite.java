@@ -4,12 +4,15 @@ import com.kodilla.stream.portfolio.Board;
 import com.kodilla.stream.portfolio.Task;
 import com.kodilla.stream.portfolio.TaskList;
 import com.kodilla.stream.portfolio.User;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -96,11 +99,11 @@ public class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        User user = new User("developer1", "John Smith");     // [1]
-        List<Task> tasks = project.getTaskLists().stream()    // [2]
-                .flatMap(l -> l.getTasks().stream())               // [3]
-                .filter(t -> t.getAssignedUser().equals(user))     // [4]
-                .collect(toList());                                // [5]
+        User user = new User("developer1", "John Smith");
+        List<Task> tasks = project.getTaskLists().stream()
+                .flatMap(l -> l.getTasks().stream())
+                .filter(t -> t.getAssignedUser().equals(user))
+                .collect(toList());
 
         //Then
         assertEquals(2, tasks.size());
@@ -145,6 +148,33 @@ public class BoardTestSuite {
 
         //Then
         assertEquals(2, longTasks);
+    }
+
+    @Test
+    void testAddTaskListAverageWorkingOnTask() {
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        long totalElements = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .count();
+
+        long totalDays = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(Task::getCreated)
+                .mapToLong(d -> DAYS.between(d, LocalDate.now()))
+                .sum();
+
+        double average = totalDays / totalElements;
+
+        //Then
+        Assertions.assertEquals(3, totalElements);
+        Assertions.assertEquals(10, average, 0);
     }
 }
 
