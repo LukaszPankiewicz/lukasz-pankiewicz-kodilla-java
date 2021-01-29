@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -177,5 +176,3 @@ public class BoardTestSuite {
         Assertions.assertEquals(10, average, 0);
     }
 }
-
-
