@@ -6,7 +6,7 @@ public class ExceptionHandling {
         String result = null;
 
         try {
-            result = secondChallenge.probablyIWillThrowException(10, 15);
+            result = secondChallenge.probablyIWillThrowException(10, 1);
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         } finally {
