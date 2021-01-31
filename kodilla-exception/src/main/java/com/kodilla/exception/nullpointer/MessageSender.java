@@ -8,4 +8,5 @@ public class MessageSender {
             throw new MessageNotSentException("Object user was null");
         }
     }
+
 }

@@ -9,4 +9,5 @@ public class VideoCollector {
         videos.add("Extra movie");
         return videos;
     }
+
 }

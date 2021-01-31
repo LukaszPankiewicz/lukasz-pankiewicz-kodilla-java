@@ -11,5 +11,6 @@ public class NullPointerExceptionRunner {
             System.out.println("Message is not send, but my program is still running");
         }
         System.out.println("Processing other logic");
+
     }
 }
