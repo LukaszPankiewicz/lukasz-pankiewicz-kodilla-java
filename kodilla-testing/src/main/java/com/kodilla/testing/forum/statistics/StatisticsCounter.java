@@ -53,28 +53,4 @@ public class StatisticsCounter {
     public double getAverageCommentsPerPost() {
         return averageCommentsPerPost;
     }
-
-    public void setUserCount(double userCount) {
-        this.userCount = userCount;
-    }
-
-    public void setPostCount(double postCount) {
-        this.postCount = postCount;
-    }
-
-    public void setCommentCount(double commentCount) {
-        this.commentCount = commentCount;
-    }
-
-    public void setAveragePostsPerUser(double averagePostsPerUser) {
-        this.averagePostsPerUser = averagePostsPerUser;
-    }
-
-    public void setAverageCommentsPerUser(double averageCommentsPerUser) {
-        this.averageCommentsPerUser = averageCommentsPerUser;
-    }
-
-    public void setAverageCommentsPerPost(double averageCommentsPerPost) {
-        this.averageCommentsPerPost = averageCommentsPerPost;
-    }
 }

@@ -88,6 +88,7 @@ public class StatisticsTestSuite {
     @Nested
     @DisplayName("Test case: comments quantity")
     class TestIfComments {
+
         @Test
         void testIfNullComments() {
             StatisticsCounter counter = new StatisticsCounter();
@@ -118,6 +119,7 @@ public class StatisticsTestSuite {
     @Nested
     @DisplayName("Test case: users quantity")
     class TestIfUser {
+
         @Test
         void testIfNullUsers() {
             StatisticsCounter counter = new StatisticsCounter();
