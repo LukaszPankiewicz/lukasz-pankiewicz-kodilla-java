@@ -11,6 +11,7 @@ public class Iteration {
                 .flatMap(e -> e.getValue().stream())
                 .collect(Collectors.joining("!"));
 
+
         System.out.println(result);
     }
 }

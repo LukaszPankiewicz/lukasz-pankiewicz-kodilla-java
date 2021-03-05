@@ -12,6 +12,7 @@ class MovieStore {
         ironManTranslations.add("Żelazny Człowiek");
         ironManTranslations.add("Iron Man");
 
+
         List<String> avengersTranslations = new ArrayList<>();
         avengersTranslations.add("Mściciele");
         avengersTranslations.add("Avengers");
