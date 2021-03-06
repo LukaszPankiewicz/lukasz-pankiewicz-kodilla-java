@@ -8,5 +8,4 @@ public class Application {
         OrderProcessor orderProcessor = new OrderProcessor(new MessageService(), new ProductOrderService(), new ProductOrderRepo());
         orderProcessor.process(orderRequest);
     }
-
 }

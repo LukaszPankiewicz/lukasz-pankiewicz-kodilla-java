@@ -6,7 +6,7 @@ public class OrderProcessor {
     private OrderService orderService;
     private OrderRepo orderRepo;
 
-    public OrderProcessor(final InformationService informationService, final ProductOrderService productOrderService, final ProductOrderRepo productOrderRepo) {
+    public OrderProcessor(final InformationService informationService, final OrderService orderService, final OrderRepo orderRepo) {
         this.informationService = informationService;
         this.orderService = orderService;
         this.orderRepo = orderRepo;
