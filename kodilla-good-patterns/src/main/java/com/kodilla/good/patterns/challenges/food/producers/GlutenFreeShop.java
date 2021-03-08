@@ -16,6 +16,6 @@ public class GlutenFreeShop implements Producer {
 
     @Override
     public String toString() {
-        return "GlutenFreeShop{}";
+        return "GlutenFreeShop.";
     }
 }

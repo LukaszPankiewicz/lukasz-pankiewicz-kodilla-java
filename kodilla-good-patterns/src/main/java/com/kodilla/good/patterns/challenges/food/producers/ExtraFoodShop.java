@@ -16,6 +16,6 @@ public class ExtraFoodShop implements Producer {
 
     @Override
     public String toString() {
-        return "ExtraFoodShop{}";
+        return "ExtraFoodShop.";
     }
 }

@@ -16,6 +16,6 @@ public class HealthyShop implements Producer {
 
     @Override
     public String toString() {
-        return "HealthyShop{}";
+        return "HealthyShop.";
     }
 }

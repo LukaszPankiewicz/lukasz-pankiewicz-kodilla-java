@@ -14,8 +14,8 @@ public class FoodOrderService {
     }
     public void foodOrder(){
         if (producer.process(order)){
-            System.out.println("Your order for: " + order.getProductName() + ". Quantity: " + order.getQuantity()
-            + ". From: " + order.getCompanyName());
+            System.out.println("Your ordered products: " + order.getProductName() + ". Quantity: " + order.getQuantity()
+            + ". Supplier name: " + order.getCompanyName());
 
         }
     }
