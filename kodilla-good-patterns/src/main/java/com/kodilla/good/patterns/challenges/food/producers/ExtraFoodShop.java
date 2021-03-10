@@ -5,6 +5,7 @@ import com.kodilla.good.patterns.challenges.food.orders.Order;
 public class ExtraFoodShop implements Producer {
     @Override
     public boolean process(Order order) {
+
         if (order.getQuantity() > 0) {
             System.out.println("Thank you for your order in ExtraFoodShop!");
 
@@ -16,6 +17,6 @@ public class ExtraFoodShop implements Producer {
 
     @Override
     public String toString() {
-        return "ExtraFoodShop.";
+        return "ExtraFoodShop{}";
     }
 }

@@ -14,9 +14,9 @@ public class Application {
         Producer glutenFreeShop = new GlutenFreeShop();
         Producer healthyShop = new HealthyShop();
 
-        Order order = new Order(extraFoodShop, "Apple", 50.0);
-        Order order1 = new Order(glutenFreeShop, "Pear", 100.0);
-        Order order2 = new Order(healthyShop, "Banana", 150.0);
+        Order order = new Order("Apple", 50.0);
+        Order order1 = new Order("Pear", 100.0);
+        Order order2 = new Order("Banana", 150.0);
 
         FoodOrderService foodOrderService = new FoodOrderService(extraFoodShop, order);
         FoodOrderService foodOrderService1 = new FoodOrderService(glutenFreeShop, order1);
@@ -25,7 +25,6 @@ public class Application {
         foodOrderService.foodOrder();
         foodOrderService1.foodOrder();
         foodOrderService2.foodOrder();
-
 
     }
 }

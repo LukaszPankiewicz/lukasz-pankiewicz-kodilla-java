@@ -1,25 +1,18 @@
 package com.kodilla.good.patterns.challenges.food.orders;
 
-import com.kodilla.good.patterns.challenges.food.producers.Producer;
 
 public class Order {
 
-    private Producer companyName;
-    private String productName;
+    private String product;
     private double quantity;
 
-    public Order(Producer companyName, String productName, double quantity) {
-        this.companyName = companyName;
-        this.productName = productName;
+    public Order(String product, double quantity) {
+        this.product = product;
         this.quantity = quantity;
     }
 
-    public Producer getCompanyName() {
-        return companyName;
-    }
-
     public String getProductName() {
-        return productName;
+        return product;
     }
 
     public double getQuantity() {
@@ -34,17 +27,14 @@ public class Order {
         Order order = (Order) o;
 
         if (Double.compare(order.quantity, quantity) != 0) return false;
-        if (companyName != null ? !companyName.equals(order.companyName) : order.companyName != null)
-            return false;
-        return productName != null ? productName.equals(order.productName) : order.productName == null;
+        return product != null ? product.equals(order.product) : order.product == null;
     }
 
     @Override
     public int hashCode() {
         int result;
         long temp;
-        result = companyName != null ? companyName.hashCode() : 0;
-        result = 31 * result + (productName != null ? productName.hashCode() : 0);
+        result = product != null ? product.hashCode() : 0;
         temp = Double.doubleToLongBits(quantity);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
