@@ -51,11 +51,10 @@ public class FlightFinder {
                 stopOver.add(fly);
             }
         }
-            if (stopOver.isEmpty()) {
-                System.out.println("There is not flight at this route, please try another connection.");
-            } else {
-                System.out.println("From: " + fromCity + " to: " + toCity + " you can fly by " + stopOver + ".");
-            }
+        if (stopOver.isEmpty()) {
+            System.out.println("There is not flight at this route, please try another connection.");
+        } else {
+            System.out.println("From: " + fromCity + " to: " + toCity + " you can fly by " + stopOver + ".");
+        }
     }
-
 }
