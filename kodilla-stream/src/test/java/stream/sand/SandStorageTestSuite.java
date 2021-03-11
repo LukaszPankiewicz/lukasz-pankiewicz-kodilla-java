@@ -1,9 +1,9 @@
 package stream.sand;
 
-import com.kodilla.stream.sand.Africa;
-import com.kodilla.stream.sand.Asia;
-import com.kodilla.stream.sand.Europe;
-import com.kodilla.stream.sand.SandStorage;
+import com.kodilla.spring.stream.sand.Africa;
+import com.kodilla.spring.stream.sand.Asia;
+import com.kodilla.spring.stream.sand.Europe;
+import com.kodilla.spring.stream.sand.SandStorage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

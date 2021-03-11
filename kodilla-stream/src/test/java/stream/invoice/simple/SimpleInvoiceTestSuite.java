@@ -1,8 +1,8 @@
 package stream.invoice.simple;
 
-import com.kodilla.stream.invoice.simple.SimpleInvoice;
-import com.kodilla.stream.invoice.simple.SimpleItem;
-import com.kodilla.stream.invoice.simple.SimpleProduct;
+import com.kodilla.spring.stream.invoice.simple.SimpleInvoice;
+import com.kodilla.spring.stream.invoice.simple.SimpleItem;
+import com.kodilla.spring.stream.invoice.simple.SimpleProduct;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

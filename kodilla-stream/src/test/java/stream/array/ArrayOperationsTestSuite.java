@@ -1,6 +1,6 @@
 package stream.array;
 
-import com.kodilla.stream.array.ArrayOperations;
+import com.kodilla.spring.stream.array.ArrayOperations;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

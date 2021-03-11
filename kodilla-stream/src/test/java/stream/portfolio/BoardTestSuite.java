@@ -1,9 +1,9 @@
 package stream.portfolio;
 
-import com.kodilla.stream.portfolio.Board;
-import com.kodilla.stream.portfolio.Task;
-import com.kodilla.stream.portfolio.TaskList;
-import com.kodilla.stream.portfolio.User;
+import com.kodilla.spring.stream.portfolio.Board;
+import com.kodilla.spring.stream.portfolio.Task;
+import com.kodilla.spring.stream.portfolio.TaskList;
+import com.kodilla.spring.stream.portfolio.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

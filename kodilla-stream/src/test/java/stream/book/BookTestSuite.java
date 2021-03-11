@@ -1,7 +1,7 @@
 package stream.book;
 
-import com.kodilla.stream.book.Book;
-import com.kodilla.stream.book.BookDirectory;
+import com.kodilla.spring.stream.book.Book;
+import com.kodilla.spring.stream.book.BookDirectory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

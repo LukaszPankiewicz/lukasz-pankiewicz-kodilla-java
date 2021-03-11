@@ -1,8 +1,8 @@
 package stream.world;
 
-import com.kodilla.stream.world.Continent;
-import com.kodilla.stream.world.Country;
-import com.kodilla.stream.world.World;
+import com.kodilla.spring.stream.world.Continent;
+import com.kodilla.spring.stream.world.Country;
+import com.kodilla.spring.stream.world.World;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
