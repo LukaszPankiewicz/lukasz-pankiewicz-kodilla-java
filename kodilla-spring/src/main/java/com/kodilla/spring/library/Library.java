@@ -26,4 +26,5 @@ public final class Library {
     public void loadFromDb() {
         libraryDbController.loadData();
     }
+
 }

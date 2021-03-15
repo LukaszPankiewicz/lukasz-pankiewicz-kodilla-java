@@ -12,4 +12,6 @@ public class IfDayIsOddCondition implements Condition {
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
         return LocalDate.now().getDayOfMonth() % 2 != 0;
     }
+
 }
+
