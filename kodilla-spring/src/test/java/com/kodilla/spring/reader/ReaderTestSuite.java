@@ -29,4 +29,5 @@ public class ReaderTestSuite {
         //Then
         System.out.println("Bean book2 was found in container: " + book2Exists);
     }
+
 }
