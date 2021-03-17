@@ -25,4 +25,5 @@ public class LoggerTestSuite {
         //Then
         Assertions.assertEquals("test1", result);
     }
+
 }
