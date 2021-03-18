@@ -68,4 +68,5 @@ public final class Board extends Prototype<Board> {
     public int hashCode() {
         return Objects.hash(name, lists);
     }
+
 }

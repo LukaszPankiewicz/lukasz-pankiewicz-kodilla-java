@@ -60,4 +60,5 @@ class BoardTestSuite {
         assertEquals(cloneBoard.getLists(), board.getLists());
         assertNotEquals(deepClonedBoard.getLists(), board.getLists());
     }
+
 }
