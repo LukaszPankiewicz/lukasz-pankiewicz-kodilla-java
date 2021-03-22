@@ -26,13 +26,40 @@ public class Bigmac {
         private String bun;
         private int burgers;
         private String sauce;
-        private List<String> ingredients = new ArrayList<>();
-        private List<String> bunTypes = new ArrayList<>();
-        private List<String> sauceTypes = new ArrayList<>();
+        private final List<String> ingredients = new ArrayList<>();
+        private final List<String> bunTypes = createListOfBuns();
+        private final List<String> sauceTypes = createListOfSauces();
+        private final List<String> ingredientsTypes = createListOfIngredients();
+
+        private List<String> createListOfBuns() {
+            List<String> result = new ArrayList<>();
+            result.add(BUN_WITH_SESAME);
+            result.add(BUN_WITHOUT_SESAME);
+            return result;
+        }
+
+        private List<String> createListOfSauces() {
+            List<String> result = new ArrayList<>();
+            result.add(SAUCE_STANDARD);
+            result.add(SAUCE_1000ISLAND);
+            result.add(SAUCE_BARBECUE);
+            return result;
+        }
+
+        private List<String> createListOfIngredients() {
+            List<String> result = new ArrayList<>();
+            result.add(INGREDIENT_SALAD);
+            result.add(INGREDIENT_ONION);
+            result.add(INGREDIENT_BACON);
+            result.add(INGREDIENT_PRAWNS);
+            result.add(INGREDIENT_CHILI);
+            result.add(INGREDIENT_CUCUMBER);
+            result.add(INGREDIENT_CHEESE);
+            result.add(INGREDIENT_MUSHROOMS);
+            return result;
+        }
 
         public BigmacBuilder bun(String bun) {
-            bunTypes.add(BUN_WITH_SESAME);
-            bunTypes.add(BUN_WITHOUT_SESAME);
 
             if (bunTypes.contains(bun)) {
                 this.bun = bun;
@@ -43,7 +70,7 @@ public class Bigmac {
         }
 
         public BigmacBuilder burgers(int burgers) {
-            if (burgers >= 0) {
+            if (burgers >= 1) {
                 this.burgers = burgers;
             } else {
                 throw new IllegalStateException("You must order at least 1 burger");
@@ -52,9 +79,6 @@ public class Bigmac {
         }
 
         public BigmacBuilder sauce(String sauce) {
-            sauceTypes.add(SAUCE_STANDARD);
-            sauceTypes.add(SAUCE_1000ISLAND);
-            sauceTypes.add(SAUCE_BARBECUE);
 
             if (sauceTypes.contains(sauce)) {
                 this.sauce = sauce;
@@ -66,16 +90,8 @@ public class Bigmac {
         }
 
         public BigmacBuilder ingredient(String ingredient) {
-            ingredients.add(INGREDIENT_SALAD);
-            ingredients.add(INGREDIENT_ONION);
-            ingredients.add(INGREDIENT_CHEESE);
-            ingredients.add(INGREDIENT_BACON);
-            ingredients.add(INGREDIENT_CUCUMBER);
-            ingredients.add(INGREDIENT_MUSHROOMS);
-            ingredients.add(INGREDIENT_PRAWNS);
-            ingredients.add(INGREDIENT_CHILI);
 
-            if (ingredients.contains(ingredient)) {
+            if (ingredientsTypes.contains(ingredient)) {
                 ingredients.add(ingredient);
             } else {
                 throw new IllegalStateException("Available ingredients: " + ingredient);
