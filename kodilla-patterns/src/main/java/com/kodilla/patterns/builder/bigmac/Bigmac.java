@@ -3,10 +3,10 @@ package com.kodilla.patterns.builder.bigmac;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bigmac {
-    public final String bun;
-    public final int burgers;
-    public final String sauce;
+public final class Bigmac {
+    private final String bun;
+    private final int burgers;
+    private final String sauce;
     private List<String> ingredients = new ArrayList<>();
     public final static String BUN_WITH_SESAME = "BUN_WITH_SESAME";
     public final static String BUN_WITHOUT_SESAME = "BUN_WITHOUT_SESAME";
@@ -104,7 +104,7 @@ public class Bigmac {
         }
     }
 
-    public Bigmac(String bun, int burgers, String sauce, List<String> ingredients) {
+    private Bigmac(String bun, int burgers, String sauce, List<String> ingredients) {
         this.bun = bun;
         this.burgers = burgers;
         this.sauce = sauce;
