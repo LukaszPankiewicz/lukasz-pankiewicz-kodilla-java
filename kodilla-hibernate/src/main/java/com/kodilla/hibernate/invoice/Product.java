@@ -19,7 +19,6 @@ public class Product {
     public Product() {
     }
 
-
     @Id
     @GeneratedValue
     @NotNull
