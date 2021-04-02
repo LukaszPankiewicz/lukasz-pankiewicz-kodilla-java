@@ -106,7 +106,7 @@ class CompanyDaoTestSuite {
         List<Company> nameWithThreeFirstLetters = companyDao.retrieveNameWithThreeFirstLetters("Gre");
 
         //Then
-        assertEquals(1, lastNameEqualsParam.size());
+        assertEquals(2, lastNameEqualsParam.size());
         assertEquals(2, nameWithThreeFirstLetters.size());
 
 
