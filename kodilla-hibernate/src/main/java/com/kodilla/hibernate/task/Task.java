@@ -26,6 +26,7 @@ import java.util.Date;
                 " WHERE DATEDIFF(DATE_ADD(CREATED, INTERVAL DURATION DAY), NOW()) > 5",
         resultClass = Task.class
 )
+
 @Entity
 @Table(name = "TASKS")
 public final class Task {
