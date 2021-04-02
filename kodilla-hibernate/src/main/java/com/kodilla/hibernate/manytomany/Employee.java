@@ -9,6 +9,7 @@ import java.util.List;
         name = "Employee.retrieveLastName",
         query = "FROM Employee WHERE lastName = :LASTNAME"
 )
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
