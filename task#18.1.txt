@@ -1,0 +1,19 @@
+{
+	"type":"Suv",
+	"model":"BMW",
+	"engineCapacity":1999,
+	"seats":[
+		"vol1":
+			"x",
+			"y",
+		"vol2":
+			"z",
+			"x",
+		"vol3":
+			"z",
+			"y",
+		"vol4":
+			"x",
+			"z"
+		]
+}
