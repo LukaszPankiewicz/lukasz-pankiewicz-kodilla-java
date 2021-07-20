@@ -4,7 +4,6 @@ import com.kodilla.hibernate.tasklist.TaskList;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @NamedQueries({

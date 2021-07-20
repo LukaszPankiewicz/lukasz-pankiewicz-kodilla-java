@@ -16,21 +16,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @SpringBootTest
 public class TaskListDaoTestSuite {
+    private static final String DESCRIPTION = "Kodilla Course Tasks";
+    private static final String LIST_NAME = "KODILLA";
 
     @Autowired
     private TaskListDao taskListDao;
-    private static final String LISTNAME = "Test list";
-    private static final String DESCRIPTION = "Test: Learn Hibernate";
 
     @Test
     void testFindByListName() {
         //Given
-        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
+        TaskList taskList = new TaskList(LIST_NAME, DESCRIPTION);
         taskListDao.save(taskList);
-        String name = taskList.getListName();
+        String listName = taskList.getListName();
 
         //When
-        List<TaskList> readTaskList = taskListDao.findByListName(name);
+        List<TaskList> readTaskList = taskListDao.findByListName(listName);
 
         //Then
         assertEquals(1, readTaskList.size());
@@ -39,7 +39,7 @@ public class TaskListDaoTestSuite {
         int id = readTaskList.get(0).getId();
         taskListDao.deleteById(id);
     }
-
+    /*
     @Test
     void testTaskListDaoSaveWithTasks() {
         //Given
@@ -49,7 +49,7 @@ public class TaskListDaoTestSuite {
         TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
         task.setTaskFinancialDetails(tfd);
         task2.setTaskFinancialDetails(tfd2);
-        TaskList taskList = new TaskList(LISTNAME, "ToDo tasks");
+        TaskList taskList = new TaskList(LIST_NAME, "ToDo tasks");
         taskList.getTasks().add(task);
         taskList.getTasks().add(task2);
         task.setTaskList(taskList);
@@ -66,4 +66,5 @@ public class TaskListDaoTestSuite {
         taskListDao.deleteById(id);
     }
 
+     */
 }
